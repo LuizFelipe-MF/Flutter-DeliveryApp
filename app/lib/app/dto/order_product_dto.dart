@@ -2,7 +2,7 @@ import 'package:app/app/models/product_model.dart';
 
 class OrderProductDto {
   final ProductModel product;
-  final int amount;
+  int amount;
 
   OrderProductDto({
     required this.product,

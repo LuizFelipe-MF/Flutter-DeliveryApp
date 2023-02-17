@@ -3,6 +3,8 @@ import 'package:app/app/core/ui/styles/app_styles.dart';
 import 'package:app/app/core/ui/styles/colors_app.dart';
 import 'package:app/app/core/ui/theme/theme_config.dart';
 import 'package:app/app/pages/home/home_router.dart';
+import 'package:app/app/pages/product_detail/product_detail_page.dart';
+import 'package:app/app/pages/product_detail/product_detail_router.dart';
 import 'package:app/app/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -19,6 +21,7 @@ class App extends StatelessWidget {
         routes: {
           '/': (context) => const SplashPage(),
           '/home': (context) => HomeRouter.page,
+          '/productDetail': (context) => ProductDetailRouter.page,
         },
         theme: ThemeConfig.theme,
       ),

@@ -4,6 +4,7 @@ import 'package:app/app/core/ui/helpers/size_extensions.dart';
 import 'package:app/app/core/ui/styles/text_styles.dart';
 import 'package:app/app/core/ui/widgets/delivery_app_bar.dart';
 import 'package:app/app/core/ui/widgets/delivery_increment_decrement_button.dart';
+import 'package:app/app/dto/order_product_dto.dart';
 import 'package:app/app/models/product_model.dart';
 import 'package:app/app/pages/product_detail/product_detail_controller.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -13,7 +14,13 @@ import 'package:provider/provider.dart';
 
 class ProductDetailPage extends StatefulWidget {
   final ProductModel product;
-  const ProductDetailPage({super.key, required this.product});
+  final OrderProductDto? order;
+
+  const ProductDetailPage({
+    super.key,
+    required this.product,
+    this.order,
+  });
 
   @override
   State<ProductDetailPage> createState() => _ProductDetailPageState();
@@ -91,7 +98,14 @@ class _ProductDetailPageState
                     child: BlocBuilder<ProductDetailController, int>(
                       builder: (context, amount) {
                         return ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pop(
+                              OrderProductDto(
+                                product: widget.product,
+                                amount: amount,
+                              ),
+                            );
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

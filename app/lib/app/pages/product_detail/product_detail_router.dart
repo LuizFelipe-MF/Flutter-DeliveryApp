@@ -18,6 +18,7 @@ class ProductDetailRouter {
 
           return ProductDetailPage(
             product: args['product'],
+            order: args['order'],
           );
         },
       );

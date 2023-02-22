@@ -14,6 +14,10 @@ class PaymentTypesModel {
     required this.enable,
   });
 
+ 
+
+  
+
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'id': id,
@@ -25,15 +29,14 @@ class PaymentTypesModel {
 
   factory PaymentTypesModel.fromMap(Map<String, dynamic> map) {
     return PaymentTypesModel(
-      id: map['id'] as int,
-      name: map['name'] as String,
-      acronym: map['acronym'] as String,
-      enable: map['enable'] as bool,
+      id: map['id']?.toInt() ?? 0,
+      name: map['name'] ?? '',
+      acronym: map['acronym'] ?? '',
+      enable: map['enable'] ?? false,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory PaymentTypesModel.fromJson(String source) =>
-      PaymentTypesModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory PaymentTypesModel.fromJson(String source) => PaymentTypesModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

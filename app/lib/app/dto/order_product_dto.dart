@@ -2,7 +2,7 @@ import 'package:app/app/models/product_model.dart';
 
 class OrderProductDto {
   final ProductModel product;
-  int amount;
+  final int amount;
 
   OrderProductDto({
     required this.product,
@@ -10,4 +10,14 @@ class OrderProductDto {
   });
 
   double get totalPrice => amount * product.price;
+
+  OrderProductDto copyWith({
+    ProductModel? product,
+    int? amount,
+  }) {
+    return OrderProductDto(
+      product: product ?? this.product,
+      amount: amount ?? this.amount,
+    );
+  }
 }

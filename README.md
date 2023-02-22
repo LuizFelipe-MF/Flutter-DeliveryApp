@@ -1,4 +1,4 @@
-![Logo of the project](https://github.com/LuizFelipe-MF/Flutter-DeliveryApp/blob/main/readme_images/Banner.png)
+<img src="https://github.com/LuizFelipe-MF/Flutter-DeliveryApp/blob/main/readme_images/Banner.png" width="100%" height="200">
 
 ## Delivery App
 

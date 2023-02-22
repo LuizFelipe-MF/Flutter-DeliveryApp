@@ -1,4 +1,4 @@
-<img src="https://github.com/LuizFelipe-MF/Flutter-DeliveryApp/blob/main/readme_images/Banner.png" width="100%" height="200">
+<img src="https://github.com/LuizFelipe-MF/Flutter-DeliveryApp/blob/main/readme_images/BannerSVG.svg" width="100%" height="200">
 
 ## Delivery App
 
